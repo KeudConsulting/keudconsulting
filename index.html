@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keud Consulting - Experts Data</title>
+
+    <style>
+        /* -------------------- GLOBAL -------------------- */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f7fb;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            letter-spacing: 0.5px;
+        }
+
+        /* -------------------- HEADER -------------------- */
+        header {
+            background: linear-gradient(90deg, #0a2540, #103d66);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            height: 90px;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.08);
+        }
+
+        nav a {
+            color: white;
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffb347;
+        }
+
+        /* -------------------- HERO -------------------- */
+        .hero {
+            background: linear-gradient(135deg, #e8f1ff, #d6e6ff);
+            padding: 100px 40px;
+            text-align: center;
+            animation: fadeIn 1.2s ease;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #0a2540;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #333;
+        }
+
+        /* -------------------- SECTIONS -------------------- */
+        .section {
+            padding: 60px 40px;
+            background: white;
+            margin: 40px auto;
+            max-width: 1100px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            animation: fadeUp 1s ease;
+        }
+
+        /* -------------------- SERVICES -------------------- */
+        .services-list {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            flex: 1;
+            min-width: 260px;
+            background: #f0f4ff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        /* -------------------- CONTACT -------------------- */
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #0a2540;
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #103d66;
+        }
+
+        a.mail-link {
+            color: #0a2540;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* -------------------- FOOTER -------------------- */
+        footer {
+            background: #0a2540;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            font-size: 0.95rem;
+        }
+
+        /* -------------------- ANIMATIONS -------------------- */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="assets/logo_keud.png" alt="Logo Keud Consulting">
+        <h1>Keud Consulting</h1>
+    </div>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Votre partenaire Data</h2>
+    <p>Experts en MDM, ETL, Business Intelligence et stack ELK pour transformer vos données en valeur.</p>
+</section>
+
+<section id="services" class="section">
+    <h2>Nos Services</h2>
+    <div class="services-list">
+        <div class="service">
+            <h3>MDM (Master Data Management)</h3>
+            <p>Unification, gouvernance et qualité des données de référence pour une vision fiable et cohérente.</p>
+        </div>
+        <div class="service">
+            <h3>ETL & Data Engineering</h3>
+            <p>Conception de pipelines, ingestion, transformation et automatisation des flux de données.</p>
+        </div>
+        <div class="service">
+            <h3>Business Intelligence</h3>
+            <p>Création de dashboards, reporting avancé et aide à la décision.</p>
+        </div>
+        <div class="service">
+            <h3>Stack ELK (Elasticsearch, Logstash, Kibana)</h3>
+            <p>Monitoring, analyse de logs, observabilité et visualisation temps réel.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2>À propos</h2>
+    <p>
+        Keud Consulting accompagne les entreprises dans la valorisation de leurs données grâce à une expertise 
+        complète couvrant l’ingénierie, la gouvernance, l’analyse et l’observabilité. Notre approche allie 
+        excellence technique et compréhension des enjeux métiers pour fournir des solutions data robustes, 
+        évolutives et orientées résultats.
+    </p>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <p><strong>Adresse :</strong> 15 avenue de l'Europe, 77600 Bussy-Saint-Georges</p>
+    <p><strong>Email :</strong> <a href="mailto:keudconsulting@outlook.fr" class="mail-link">keudconsulting@outlook.fr</a></p>
+
+    <form>
+        <label>Nom</label>
+        <input type="text" placeholder="Votre nom">
+
+        <label>Email</label>
+        <input type="email" placeholder="Votre email">
+
+        <label>Message</label>
+        <textarea rows="5" placeholder="Votre message"></textarea>
+
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Keud Consulting — Tous droits réservés
+</footer>
+
+</body>
+</html>
